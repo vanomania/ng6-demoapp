@@ -6,6 +6,7 @@ import { ColorToolComponent } from './components/color-tool/color-tool.component
   imports: [
     CommonModule
   ],
-  declarations: [ColorToolComponent]
+  declarations: [ColorToolComponent],
+  exports: [ColorToolComponent],
 })
 export class ColorToolModule { }

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorToolComponent implements OnInit {
 
+  public headerText = 'Color Tool';
+
   constructor() { }
 
   ngOnInit() {
