@@ -1,28 +1,6 @@
 <app-tool-header [headerText]="headerText"></app-tool-header>
-<table>
-  <tbody>
-  <tr>
-    <th>Id</th>
-    <th>Make</th>
-    <th>Model</th>
-    <th>Year</th>
-    <th>Color</th>
-    <th>Price</th>
-  </tr>
-  </tbody>
+<car-table [cars]="cars"></car-table>
 
-  <tbody>
-  <tr *ngFor="let car of cars">
-    <td>{{car.id}}</td>
-    <td>{{car.make}}</td>
-    <td>{{car.model}}</td>
-    <td>{{car.year}}</td>
-    <td>{{car.color}}</td>
-    <td>{{car.price}}</td>
-  </tr>
-  </tbody>
-
-</table>
 <form [formGroup]="carForm">
 
   <div>

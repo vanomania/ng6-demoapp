@@ -1,7 +1,5 @@
 <app-tool-header [headerText]="headerText"> </app-tool-header>
-<ul>
-  <li *ngFor="let color of colors" [ngClass]="{critical: color==='red', info: color==='blue'}">{{color}}</li>
-</ul>
+<unordered-list-component [items]="colors"></unordered-list-component>
 
 <form [formGroup]="colorForm">
   <div>
