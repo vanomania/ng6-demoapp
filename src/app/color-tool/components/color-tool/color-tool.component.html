@@ -1,6 +1,4 @@
-<header>
-  <h1 class="info">{{headerText}}</h1>
-</header>
+<app-tool-header [headerText]="headerText"> </app-tool-header>
 <ul>
   <li *ngFor="let color of colors" [ngClass]="{critical: color==='red', info: color==='blue'}">{{color}}</li>
 </ul>
