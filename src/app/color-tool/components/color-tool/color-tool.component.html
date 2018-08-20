@@ -1,6 +1,6 @@
 <header>
-  <h1>{{headerText}}</h1>
+  <h1 class="info">{{headerText}}</h1>
 </header>
 <ul>
-  <li *ngFor="let color of colors">{{color}}</li>
+  <li *ngFor="let color of colors" [ngStyle]="{color: color}">{{color}}</li>
 </ul>
