@@ -2,5 +2,5 @@
   <h1 class="info">{{headerText}}</h1>
 </header>
 <ul>
-  <li *ngFor="let color of colors" [ngClass]="color">{{color}}</li>
+  <li *ngFor="let color of colors" [ngClass]="{critical: color==='red', info: color==='blue'}">{{color}}</li>
 </ul>
