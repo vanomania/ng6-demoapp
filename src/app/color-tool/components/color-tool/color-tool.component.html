@@ -4,3 +4,11 @@
 <ul>
   <li *ngFor="let color of colors" [ngClass]="{critical: color==='red', info: color==='blue'}">{{color}}</li>
 </ul>
+
+<form [formGroup]="colorForm">
+  <div>
+    <label for="color-input">New Color:</label>
+    <input type="text" id="color-input" formControlName="color"/>
+    <button type="button" (click)="addColor()">Add Color</button>
+  </div>
+</form>
