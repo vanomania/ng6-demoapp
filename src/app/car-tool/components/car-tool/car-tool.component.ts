@@ -8,6 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class CarToolComponent implements OnInit {
 
   public headerText = 'Car Tool';
+  public cars = [
+    {
+      id: 0,
+      make: 'Honda',
+      model: 'Accord',
+      year: 2003,
+      color: 'blue',
+      price: 5000
+    },
+    {
+      id: 1,
+      make: 'Lamborghini',
+      model: 'Aventador',
+      year: 2018,
+      color: 'red',
+      price: 120000
+    }
+  ]
   constructor() { }
 
   ngOnInit() {
