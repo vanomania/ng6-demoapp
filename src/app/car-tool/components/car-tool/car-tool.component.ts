@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Car } from '../../models/car';
 
 @Component({
   selector: 'app-car-tool',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CarToolComponent implements OnInit {
 
   public headerText = 'Car Tool';
-  public cars = [
+  public cars: Car[] = [
     {
       id: 0,
       make: 'Honda',
