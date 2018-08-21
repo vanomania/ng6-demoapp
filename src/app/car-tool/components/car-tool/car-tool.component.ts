@@ -22,6 +22,28 @@ export class CarToolComponent implements OnInit {
   ngOnInit() {
   }
 
+  stopEditMode() {
+    this.editCarId = -1;
+  }
+
+  doEditCar(carId: number) {
+    this.editCarId = carId;
+  }
+
+  doDeleteCar(carId: number) {
+    this.cars = this.cars.filter(c => c.id !== carId);
+  }
+
+  doCancelCar() {
+    this.stopEditMode();
+  }
+
+  doSaveCar(car: Car) {
+    const carIndex = this.cars.findIndex(c => c.id === car.id);
+    this.cars = [ ...this.cars.slice(0, carIndex), car, ...this.cars.slice(carIndex + 1) ];
+    this.stopEditMode();
+  }
+
   doAddCar(car: Car) {
 
     const carToAdd = {
@@ -32,17 +54,4 @@ export class CarToolComponent implements OnInit {
     this.cars = [ ...this.cars, carToAdd ];
   }
 
-  doDeleteCar(carId: number) {
-    this.cars = this.cars.filter(car => {
-      return car.id !== carId;
-    });
-  }
-
-  doEditCar(carId: number) {
-    this.editCarId = carId;
-  }
-
-  doCancelEdit() {
-    this.editCarId = -1;
-  }
 }
