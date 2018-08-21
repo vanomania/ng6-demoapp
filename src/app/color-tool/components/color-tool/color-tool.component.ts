@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'color-tool',
   templateUrl: './color-tool.component.html',
@@ -15,11 +15,17 @@ export class ColorToolComponent implements OnInit {
   //   this.fb = fb;
   // }
 
-  constructor() {
+  public ellipsisDemoForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
 
   }
 
   ngOnInit() {
+    this.ellipsisDemoForm = this.fb.group({
+      content: [''],
+      contentLength: [0],
+    });
   }
 
   addColor(color: string) {
