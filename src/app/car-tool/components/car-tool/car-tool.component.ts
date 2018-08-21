@@ -14,6 +14,8 @@ export class CarToolComponent implements OnInit {
     { id: 2, make: 'Tesla', model: 'S', year: 2016, color: 'red', price: 15000 },
   ];
 
+  public editCarId = -1;
+
   constructor() {
   }
 
@@ -36,4 +38,11 @@ export class CarToolComponent implements OnInit {
     });
   }
 
+  doEditCar(carId: number) {
+    this.editCarId = carId;
+  }
+
+  doCancelEdit() {
+    this.editCarId = -1;
+  }
 }

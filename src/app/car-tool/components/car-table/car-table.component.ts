@@ -12,11 +12,22 @@ export class CarTableComponent implements OnInit {
   @Input()
   public cars: Car[] = [];
 
+  @Input()
+  public editCarId: number;
+
   @Output()
   public deleteCar = new EventEmitter<number>();
 
-  doDeleteCar(carId) {
+
+  @Output()
+  public editCar = new EventEmitter<number>();
+
+  doDeleteCar(carId: number) {
     this.deleteCar.emit(carId);
+  }
+
+  doToggleEdit(carId: number) {
+    this.editCar.emit(carId);
   }
 
   constructor() { }

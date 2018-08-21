@@ -12,8 +12,14 @@ export class CarTableRowComponent implements OnInit {
   @Input()
   public car: Car;
 
+  @Input()
+  public editCarId: number;
+
   @Output()
   public deleteCar = new EventEmitter<number>();
+
+  @Output()
+  public editCar = new EventEmitter<number>();
 
   constructor() { }
 
@@ -22,5 +28,9 @@ export class CarTableRowComponent implements OnInit {
 
   public doDeleteCar() {
     this.deleteCar.emit(this.car.id);
+  }
+
+  public doToggleEditCar() {
+    this.editCar.emit(this.car.id);
   }
 }
