@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Car } from '../../models/car';
 
@@ -11,6 +11,13 @@ export class CarTableComponent implements OnInit {
 
   @Input()
   public cars: Car[] = [];
+
+  @Output()
+  public deleteCar = new EventEmitter<number>();
+
+  doDeleteCar(carId) {
+    this.deleteCar.emit(carId);
+  }
 
   constructor() { }
 

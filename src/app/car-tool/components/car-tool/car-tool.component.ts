@@ -20,7 +20,7 @@ export class CarToolComponent implements OnInit {
   ngOnInit() {
   }
 
-  addCar(car: Car) {
+  doAddCar(car: Car) {
 
     const carToAdd = {
       ...car,
@@ -28,6 +28,12 @@ export class CarToolComponent implements OnInit {
     };
 
     this.cars = [ ...this.cars, carToAdd ];
+  }
+
+  doDeleteCar(carId: number) {
+    this.cars = this.cars.filter(car => {
+      return car.id !== carId;
+    });
   }
 
 }
