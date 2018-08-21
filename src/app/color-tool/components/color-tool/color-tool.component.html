@@ -1,3 +1,5 @@
-<app-tool-header [headerText]="headerText"> </app-tool-header>
-<unordered-list-component [items]="colors"></unordered-list-component>
+<tool-header [headerText]="headerText"></tool-header>
+<unordered-list [items]="colors"></unordered-list>
 <color-form buttonText="Add Color" (submitColor)="addColor($event)"></color-form>
+
+

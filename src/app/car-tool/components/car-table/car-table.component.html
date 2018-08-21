@@ -1,16 +1,16 @@
 <table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td><label for="edit-make-input">Make</label></td>
+      <td><label for="edit-model-input">Model</label></td>
+      <td><label for="edit-year-input">Year</label></td>
+      <td><label for="edit-color-input">Color</label></td>
+      <td><label for="edit-price-input">Price</label></td>
+      <td>Actions</td>
+    </tr>
+  </thead>
   <tbody>
-  <tr>
-    <th>Id</th>
-    <th>Make</th>
-    <th>Model</th>
-    <th>Year</th>
-    <th>Color</th>
-    <th>Price</th>
-  </tr>
-  </tbody>
-
-  <tbody>
-    <car-table-row [cars]="cars"></car-table-row>
+    <tr class="car-table-row" *ngFor="let car of cars" [car]="car"></tr>
   </tbody>
 </table>

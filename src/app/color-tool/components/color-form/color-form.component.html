@@ -1,7 +1,7 @@
 <form [formGroup]="colorForm">
   <div>
     <label for="color-input">New Color:</label>
-    <input type="text" id="color-input" formControlName="color"/>
-    <button type="button" (click)="doSubmitColor()">{{buttonText}}</button>
+    <input type="text" id="color-input" formControlName="colorInput" />
   </div>
+  <button type="button" (click)="doSubmitColor()">{{buttonText}}</button>
 </form>
